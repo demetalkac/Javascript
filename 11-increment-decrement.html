@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+    <body>
+    <script>
+        let z = 3;
+      let a = z++; // once atama yapar sonra arttirir
+      let b = ++z; //once arttirir sonra atama yapar
+      console.log(a, b, z); //3 5 5
+
+        const x = 3;
+      let k = x++; //hata burada
+      console.log(k); //Uncaught TypeError: Assignment to constant variable.
+    </script>
+    </body>
+</html>

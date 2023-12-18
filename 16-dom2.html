@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+
+        .text-style{
+            color:aqua;
+            text-shadow: 3px 3px 3px black; 
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Hello Word</h1>
+    <p id="pEl" class="red text-center">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet aliquam veniam, 
+        doloremque corrupti aut eos accusantium. Velit aperiam ullam cumque sit excepturi 
+        tempora quibusdam laudantium architecto illo alias. Explicabo, vel?
+    </p>
+
+
+    <script>
+
+         let pEl = document.querySelector("#pEl"); // classları yazarken . koyup yazılır id'leri yazarken de # isareti koyulup yazılır.
+    
+        pEl.classList.add("text-style");
+        
+         console.log(pEl.classList); // bir elementin sahip oldugu classları getirir
+
+        pEl.classList.remove("red");
+    </script>
+
+
+</body>
+</html>

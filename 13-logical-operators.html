@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = false;
+        let y = true;
+        let z = true;
+        let m = false;
+        let n = "false";
+
+      const comperation1 = y && z && 5; //5 basi hep true ise sondakini alir
+        console.log(comperation1);
+
+      const comperation2 = y && m && z && 5; //false en basta false varsa sona gitmez
+        console.log(comperation2);
+
+      const comperation3 = m || x || false || 34; //34
+        console.log(comperation3);
+
+      const comperation4 = true && null; //null
+        console.log(comperation4);
+
+      const comperation5 = true && null; //null
+        console.log(comperation5);
+
+      const comperation6 = true || null; //true
+        console.log(comperation6);
+
+      const comperation7 = n || 34; //false
+        console.log(comperation7);
+
+      const comperation8 = n && 34; //34
+        console.log(comperation8);
+
+        s2 = "kus";
+        s3 = "kedi";
+      console.log(s2 || s3); //kus
+      console.log(s2 && s3); //kedi
+
+        s2 = true;
+        s3 = false;
+      console.log(!s2); //false
+        console.log(!s3);
+
+       console.log(!s3); //true
+      console.log(s3); //null
+    </script>
+    </body>
+</html>

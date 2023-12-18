@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Hello Word</h1>
+    <p class="desc">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet aliquam veniam, 
+        doloremque corrupti aut eos accusantium. Velit aperiam ullam cumque sit excepturi 
+        tempora quibusdam laudantium architecto illo alias. Explicabo, vel?
+    </p>
+
+    <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+    <script>
+     const elH1 = document.querySelector("h1"); //h1 elementini sectik ilk elemani verir
+      console.log(elH1); //h1
+      console.log(elH1.innerText); //Hello World
+      elH1.innerText = "Hello Javascript"; //bunu yazinca Hello World =>Hello JAvascripte donustu
+      elH1.innerHTML = "Hello <em> Javascript</em>"; //javascripti italik yazdirdik
+
+    const allH1 = document.querySelectorAll("h1");
+      console.log(allH1); //NodeList(2) [h1, h1]
+
+      const allLi = document.querySelectorAll(".menu li"); //menu icindeki li ler demek
+      console.log(allLi); //NodeList(3) [li, li, li]
+
+      const elHome = document.querySelector(".menu li:first-child"); //Home u sectik
+      elHome.innerText = "Ana Sayfa"; // DOM manupilation yaptik
+
+      const elDesc = document.querySelector(".desc"); //clas adi desc olani sectik
+
+      console.log(elDesc.innerText); //sadece text i alir icindeki italik bold yapma gibi taglari almaz
+      console.log(elDesc.innerHTML); //text i taglarla beraber alir
+
+
+
+
+    </script>
+
+
+</body>
+</html>
