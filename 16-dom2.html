@@ -18,8 +18,9 @@
         }
 
         .text-style{
-            color:aqua;
+            color:#efefef;
             text-shadow: 3px 3px 3px black; 
+            padding: 2rem;
         }
 
     </style>
@@ -40,10 +41,12 @@
          let pEl = document.querySelector("#pEl"); // classları yazarken . koyup yazılır id'leri yazarken de # isareti koyulup yazılır.
     
         pEl.classList.add("text-style");
-        
+        pEl.classList.remove("red");
+        pEl.classList.remove("blue");
+
          console.log(pEl.classList); // bir elementin sahip oldugu classları getirir
 
-        pEl.classList.remove("red");
+        
     </script>
 
 

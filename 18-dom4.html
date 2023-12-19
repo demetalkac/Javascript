@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+
+
+    
+
+    <input type="text" id="txtName" value="Ali Bey"/> 
+    <button onclick="sayHello()">Say Hello</button>    
+    /><!--"<button>Say Hello</button>"seklinde yazarsak gidip lblMassage deki 3 noktaya yazacak, fakat bunu bir methodd icine yazıp burda da onu tanımlarsak daha clear bir kod olur--> 
+
+    <h3 id="lblMessage">...</h3>
+
+
+    <script>
+        const txtName = document.querySelector("#txtName");  // yukardakileri bir konteynera koyduk
+        const lblMessage = document.querySelector("#lblMessage");
+
+        txtName.value = "Samet bey"; // yukarda tanımladıgımız text box ın degerini bu sekilde degistirebiliriz. Tekrar aynı isme atama yapamayız.
+
+        // lblMessage.innerText = `Merhaba ${txtName.value} `; // h3 de, lblMessage icindeki 3 nokta yerine MErhaba yanına txtName de ne varsa onu eklemis oluyoruz
+        function sayHello(){
+            lblMessage.innerText = `Merhaba ${txtName.value} `; // method icinde tanımladık
+        }
+
+    </script>
+    
+</body>
+</html>

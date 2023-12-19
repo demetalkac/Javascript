@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        
+    </style>
+</head>
+<body>
+    /><!-- oninput="sayHello()" :sayHello fonksiyonu inputta bi degisiklik oldugunda calısacak, "oninput" kullanımından dolayı--> 
+    <input type="text"  id="txtName" value="Veli Bey" oninput="sayHello()"/>
+
+
+
+
+    <h3 id="lblMassage">...</h3>
+
+
+    <script>
+        const lblMassage = document.querySelector("#lblmessage");
+        const txtName = document.querySelector("#txtName");
+
+        function sayHello(){
+          //  document.querySelector("#lblmessage").innerHTML = document.querySelector("#txtName").value; busekilde yapınca yavaslatır o nedenle yukarda const ta tanımladık method icinde kullandık
+            lblMassage.innerHTML = txtName.value;
+        }
+
+
+    </script>
+</body>
+</html>
