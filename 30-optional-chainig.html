@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="setUserInfo()">Click Me</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        const user1 = {
+        name: "Enis",
+        age: 21,
+        salary: 15000,
+        phone: {
+            gsm: "6756541258",
+            line: "65748878",
+        },
+        };
+        const user2 = {
+        name: "Ahmet",
+        age: 23,
+        };
+      /*
+function setUserInfo(){
+const newSalary= user1.salary * 1.15;
+const phone = user1.phone.gsm;
+console.log(`Sn. ${user1.name} yeni maasiniz ${newSalary} olmustur.`);
+VERILER OLDUGU ICIN HERHANGI BIR SORUN CIKMADI. VERILERE ULASABILDIK
+}*/
+        function setUserInfo() {
+        const newSalary = user2.salary * 1.15;
+
+        const phone = user2?.phone?.gsm; // kodlar calismaya devam eder. undefined der alt koda gecer
+        console.log(`Sn. ${user2.name} yeni maasiniz ${newSalary} olmustur.`);
+        } 
+        /*ES11 öncesi kullanılan yöntem:
+if(user2 && user2.phone && user2.phone.gsm){
+  document.querySelector(".gsm").innerHTML= user2.phone.gsm;
+}else{
+  document.querySelector(".gsm").innerHTML= "no phone";
+} 
+ESKIDEN(ES11  öNCESINDE) BOYLE YAZILIRDI(if-else) ,? ISARETI ILE BU KOD FAZLALIGINDAN KURTULDUK
+const phone = user2?.phone?.gsm; BU HEPSINI KARSILAR
+ user2 de eksik olan bilgi yüzünden kodun calısmasını durdurmaması icin 
+*/
+    </script>
+</body>
+</html>

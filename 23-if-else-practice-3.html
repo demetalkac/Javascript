@@ -13,7 +13,7 @@
 
     <script>
         function calculate(){
-            let price = document.querySelector('#txtPrice').value;
+            let price = document.querySelector('#txtPrice').value; // value : kullanıcının kutuya yazdıgını alıyor
             let discount;
 
             if(price > 500){
@@ -27,8 +27,9 @@
                 }
 
             price = price - price * discount / 100;
-            document.querySelector("#result").innerHTML = `$${price} `
-
+            document.querySelector("#result").innerHTML = `$${price} `;  //`$${price} `:string intercolation veya string literal deniyor bu yapılan seye.
+                                                          // `$${price} ` => ${price} price i gömmek icin, bas tarafdaki $ isareti de ekranda dolar isaretini görmek icin.
+                                                          //  = "$" + price; =>concat ederek böylede yazabiliriz , yada `$${price} ` böylede yazabiliriz, aynı sey.
             
         }
        // Bir Textbox tan alınan fiyat bilgisi 500 den büyükse %10 indirim uygulayıp sonucu yazan,

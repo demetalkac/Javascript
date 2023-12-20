@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+    <body>
+    <input type="number" id="txtPrice" /><br />
+
+    <input type="radio" name="type" id="rdWorker" value="worker" onchange="calculate()"/>
+    <label for="rdWorker">Worker</label><br />
+
+    <input
+        type="radio"
+        name="type"
+        id="rdRetired"
+        value="retired"
+        onchange="calculate()"
+    />
+    <label for="rdRetired">Retired</label><br />
+
+    <h3 id="result"></h3>
+    <script>
+        function calculate() {
+        const myType = document.querySelector(
+        "input[name='type']:checked"
+        ).value; //: kullanilmasi sudo dediler
+        let price = document.querySelector("#txtPrice").value;
+
+        price = myType == "worker" ? price * 0.95 : price * 0.9;
+
+        document.querySelector("#result").innerHTML = price;
+
+        console.log(myType);
+        }
+    </script>
+</body>
+</html>

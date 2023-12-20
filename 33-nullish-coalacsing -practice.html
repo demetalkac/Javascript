@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+    <body>
+    <button onclick="alanHesapla()">Click Me</button>
+    <!-- 0 -->
+    <button onclick="alanHesapla(3)">Click Me</button>
+    <!-- 0 -->
+    <button onclick="alanHesapla(5,7)">Click Me</button
+    ><!-- 35 -->
+    <h3 id="result"></h3>
+
+    <script>
+        function alanHesapla(a, b) {
+        const result = (a ?? 0) * (b ?? 0); // normalde böyle yazarız:const result = a *b; ama a ve b nin null veya undefined gelme ihtimallerine karsı nullishacaoalascing yaptık
+      //  (a ?? 0) => eger a null veya undefined ise a yerine 0 al ,anlamında
+        document.querySelector("#result").innerHTML = result;
+
+        /*
+ES5 ve oncesi kullanilan yontem :
+  if(a===null || a=== undefined){
+  a=0;
+}if(b===null || b === undefined){
+  b=0;
+}
+const result = a * b;
+*/
+        }
+  //Dikdörtgenin alanını bulun, bir fonksiyona gönderilen kenar uzunluklarını nullish coalescing ile 
+  // kontrol ederk default deger atayınız.
+    </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+    <body>
+    <input type="number" id="txtNum" placeholder="Type a number" />
+    <button onclick="onCalculateClick()">isPrime</button>
+    <h4 id="result"></h4>
+
+    <script>
+        function onCalculateClick() {
+        const num = document.querySelector("#txtNum").value;
+        const isPrime = isTheNumberPrime(num);
+
+        document.querySelector(
+            "#result"
+        ).innerHTML = `Girmis oldugunuz ${num} sayisi "${
+            isPrime ? "prime" : "not prime"
+        }"`;
+        }
+        function isTheNumberPrime(num) {
+        if (!num || isNaN(num) || num < 2) return false;
+        let flag = true; //num is a prime number
+        for (let i = 2; i < num; i++) {
+            if (num % i == 0) {
+            flag = false;
+            break;
+            }
+        }
+        return flag;
+        }
+    </script>
+    </body>
+</html>

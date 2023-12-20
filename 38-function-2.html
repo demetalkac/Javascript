@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+    <body>
+    <input type="number" id="txtYear" placeholder="Type your birth year" />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+        function onCalculateClick() {
+        const age = document.querySelector("#txtYear").value;
+
+        document.querySelector("#result").innerHTML = getAge(age);
+        }
+        function getAge(year) {
+        if (!year || isNaN(year)) return;
+        const dateTime = new Date();
+        const currentYear = dateTime.getFullYear();
+
+        if (currentYear < year) return;
+
+        const age = currentYear - year;
+        return age;
+        }
+        console.log(getAge(1980));
+      console.log(getAge("Merhaba")); //undefined
+      console.log(getAge(2100)); //undefined
+      console.log(getAge()); //undefined
+      console.log(getAge("")); //undefined
+    </script>
+    </body>
+</html>

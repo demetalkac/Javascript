@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+    <body>
+    <input type="number" id="txtYear" placeholder="Type your birth year" />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+      //arrow function yontemi
+        const sum4=(a,b) =>a+b;
+      //const isNumber =a=>!isNaN(a);
+        const sum1 = (a, b) => {
+        return a + b;
+        };
+      //Expression yontemi
+        const sum2 = (a, b) => {
+        return a + b;
+        };
+      //Geleneksel yontem
+        function sum3(a, b) {
+        return a + b;
+        }
+        console.log(sum4(5,7));
+        function onCalculateClick() {
+        const age = document.querySelector("#txtYear").value;
+
+        document.querySelector("#result").innerHTML = getAge(age);
+        }
+    </script>
+    </body>
+</html>
