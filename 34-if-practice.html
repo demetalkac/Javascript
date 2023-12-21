@@ -24,17 +24,18 @@
     <script>
         function calculate() {
         let rate = document.querySelector("#txtRate").value;
-        //rate= rate*1 ? rate: 0 ;
-        rate = !isNaN(rate) ? rate : 0;
+        //rate= rate*1 ? rate: 0 ; 
+        rate = !isNaN(rate) ? rate : 0; // rate e yani kutuya kullanıcı  rakamsal bir veri yazarsa rate'i versin, rakam dısında bisey yazarsa 0 versin , demis oluyoruz.
+        
         //Listedeki tum elementleri secerek eleman sayisini aldik
         const list = document.querySelectorAll("#product-list li");
+        //console.log(list.length);
 
         for (let i = 1; i <= list.length; i++) {
           //sifirinci element olmadigi icin i=0 yazamayiz hata verir.
-            const elPrice = document.querySelector(
-            `#product-list li:nth-child(${i}) span`
-            );
-            let price = Number(elPrice.innerHTML);
+            const elPrice = document.querySelector(`#product-list li:nth-child(${i}) span`);
+
+            let price = Number(elPrice.innerHTML);  // elPrice : string oldugu icin girilen rakamı islem yaaparken concat yapıyor ,onun icin  number a casting yaptık
           price = price + (price * rate) / 100;
             console.log(price);
             elPrice.innerHTML = price.toFixed(0);

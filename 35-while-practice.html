@@ -28,10 +28,13 @@
         while (num > 0) {
             const digit = num % 10;
             total += digit;
-            num = Math.floor(num / 10);
+            num = Math.floor(num / 10);   //floor() bu fonksiyon Math classından gelir. Virgülden sonrasını atar.
+                                          //Burda 10 bölünce son rakamı alıyoruz ama vürgülle geliyor bir sonrakini almak icin bu fonksiyonu kullandık.
         }
         alert(total);
         }
+        //soru:Bir textbox tan alınan sayının, sayı degerini hesaplayıp sonucu bir h3 icinde gösteren 
+        //     programı yazınız. örn: 8291 =>8+2+9+1=20
     </script>
     </body>
 </html>
