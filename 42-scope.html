@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    </head>
-    <body>
+  </head>
+  <body>
     <input type="number" id="txtYear" placeholder="Type your birth year" />
     <button onclick="onCalculateClick()">Calculate</button>
     <h4 id="result"></h4>
 
     <script>
-      let y = 20; //global scope
+      let y = 20; //global scope : script in basında tanımlanır.
 
-        const test1 = () => {
+      const test1 = () => {
         let x = 40; //function scope
 
         console.log(`x degiskeninin degeri : ${x}`);
         console.log(`y degiskeninin degeri : ${y}`);
-        };
+      };
 
-        const test2 = () => {
+      const test2 = () => {
         let x = 30;
         if (x > 20) {
-        let z = 15;
-            let y = 8;
-            z += 10;
-          g = 13; //javascript tanimlanmamis degiskenleri en genis scope ta kabul eder.
+          let z = 15;
+          let y = 8;
+          z += 10;
+          g = 13; //javascript tanimlanmamis degiskenleri en genis(global) scope ta kabul eder.
         }
         // console.log(z);// console'da "z is not defined" hatasi aliriz
         console.log(y);
-        };
-        const test3 = () => {
+      };
+      const test3 = () => {
         console.log(y);
         console.log(g); // global kabul ettigi icin console'a 13 yazdirir
-        };
+      };
       //console.log(`x degiskenin degeri : ${x}`); scope disi oldugu icin console da hata verdi.
-        console.log(`y degiskenin degeri : ${y}`);
-        test1();
-        test2();
-        test3();
+      console.log(`y degiskenin degeri : ${y}`);
+      test1();
+      test2();
+      test3();
     </script>
-</body>
+  </body>
 </html>

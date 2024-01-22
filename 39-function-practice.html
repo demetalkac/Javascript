@@ -22,16 +22,17 @@
         }"`;
         }
         function isTheNumberPrime(num) {
-        if (!num || isNaN(num) || num < 2) return false;
+        if (!num || isNaN(num) || num < 2) return false;  //bu satır asal olmayanlar icin,!num :bosluk, harf gibi girilenleri eler.
         let flag = true; //num is a prime number
-        for (let i = 2; i < num; i++) {
+        for (let i = 2; i < num; i++) {    // 2'den basslattık,cünkü asal sayı kendine ve 1 e bölünen
             if (num % i == 0) {
-            flag = false;
+            flag = false; // num is not a prime
             break;
             }
         }
         return flag;
         }
+        //Bir sayının asal olup olmadığını bulan fonksiyon yazınız.
     </script>
     </body>
 </html>

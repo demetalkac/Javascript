@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const car = {
+        id: "123",
+        brand: "Mercedes",
+        modal: "S50",
+        color: "white",
+        age: 2023,
+        driver: {
+            name:"Ayse",
+            age: 23}
+      };
+      const bus = {};
+      console.log(car);
+      console.log(typeof car);
+      console.log(car.modal);
+      car.age= 2024;
+      console.log(car.age);
+
+      //Bir objenin icinin bos yada dolu olup olmadigi nasil anlasilir?
+      console.log(Object.keys(car).length);
+      console.log(Object.keys(bus).length);
+      console.log(car.driver.name);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cities = ["Ankara", "istanbul", "Izmir"];
+      const countries=["USA","France","Germany","Netherlands"];
+
+      console.log(cities);
+      console.log(typeof (cities));
+      console.log(cities[2]);//dizi elemanina ulasmak icin index no kullanilir. sifirdan baslar.
+      console.log(cities.length);//dizinin eleman sayisini verir.
+
+      console.log(countries[countries.length-1]);
+      console.log(countries[4]);//undefined
+
+      countries[2]='Turkey';
+      console.log(countries[2]);//turkey yaptik
+    </script>
+  </body>
+</html>
