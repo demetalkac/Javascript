@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const animals = ["elephant", "bird", "mouse", "cat"];
+      console.log(animals);
+      console.log(animals.includes("elephant")); //true
+      console.log(animals.includes("Elephant")); //false
+
+      console.log(animals.join("")); //elephantbirdmousecat
+      console.log(animals.join()); //elephant,bird,mouse,cat
+      console.log(animals.join("-")); //elephant-bird-mouse-cat
+      console.log(animals.slice(2)); //['mouse', 'cat']
+      console.log(animals.slice(2, 3)); //['mouse']
+      console.log(animals); //['elephant', 'bird', 'mouse', 'cat']
+      console.log(animals.toString()); //elephant,bird,mouse,cat
+      const animals2 = [
+        "elephant",
+        "camel",
+        "bird",
+        "camel",
+        "mouse",
+        "camel",
+        "cat",
+      ];
+      console.log(animals2.indexOf("camel")); //1
+      console.log(animals2.lastIndexOf("camel")); //5
+      console.log(animals2.indexOf("camelx")); //-1
+    </script>
+  </body>
+</html>

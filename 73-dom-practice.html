@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="input-group">
+        <!--  class="input-group" bununla buttonu yanina aldik-->
+        <input
+          id="txtTck"
+          type="number"
+          minlength="11"
+          maxlength="11"
+          placeholder="TC kimlik no"
+          class="form-control"
+        />
+        <button id="btnSave" class="btn btn-primary" disabled>Kaydet</button>
+      </div>
+    </div>
+    <script>
+      document.querySelector("#txtTck").addEventListener("input", (e) => {
+        const btn = document.querySelector("#btnSave");
+        if (e.target.value.length == 11) {
+          btn.removeAttribute("disabled"); //uzunluk 11 e  gelince buttonun disabled ozelligini kaldirdik.
+        } else {
+          btn.setAttribute("disabled", ""); //11 olmayince disabled kaldi
+        }
+      });
+    </script>
+  </body>
+</html>

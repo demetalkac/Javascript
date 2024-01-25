@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="menu">
+      <p class="desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        deserunt totam ab impedit dolores sint inventore dolorum aut aperiam
+        amet tenetur qui ratione eaque placeat sed dolor, temporibus nesciunt
+        modi!
+      </p>
+
+      <ul>
+        <li><a href="http://">Link1</a></li>
+        <li><a href="https://google.com" id="lnk">Link2</a></li>
+        <li><a href="http://">Link3</a></li>
+        <li><a href="http://">Link4</a></li>
+        <li><a href="http://">Link5</a></li>
+        <li><a href="http://">Link6</a></li>
+      </ul>
+    </div>
+
+    <script>
+      document.querySelector("#lnk").addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(e.target.closest("ul")); //parent i sectik
+        e.target.closest(".menu").querySelector(".desc").innerHTML =
+          "Hello Ayse";
+      });
+      document.querySelector(".menu ul").children; // bu sekilde elementin cocuklarini sectik.
+
+      console.log(document.querySelector("#lnk").parentElement); //li gelir
+
+      console.log(document.querySelector("#lnk").parentElement.parentElement); //ul gelir
+      console.log(document.querySelector("#lnk").nextElementSibling); //a'nin kardesini getir dedik null dondu a tek cocuk!!!
+      console.log(
+        document.querySelector("#lnk").parentElement.nextElementSibling
+      ); //link3 un oldugu li gelir!
+      console.log(
+        document.querySelector("#lnk").parentElement.previousElementSibling
+      ); //link1 in oldugu li gelir!
+      console.log(
+        document.querySelector("#lnk").parentElement.parentElement.children
+      ); //tum li leri getirir.
+    </script>
+  </body>
+</html>

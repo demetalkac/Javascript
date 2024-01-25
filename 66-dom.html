@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Javascript</h1>
+    <h4>Javascript Variables</h4>
+    <p class="desc">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+      temporibus necessitatibus dignissimos repudiandae! Voluptatum, doloremque
+      tempora incidunt aspernatur temporibus amet vitae obcaecati, aut quam quia
+      maiores harum laborum dolorem accusamus?
+    </p>
+    <h4>Javascript Constants</h4>
+    <p class="desc">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+      temporibus necessitatibus dignissimos repudiandae! Voluptatum, doloremque
+      tempora incidunt aspernatur temporibus amet vitae obcaecati, aut quam quia
+      maiores harum laborum dolorem accusamus?
+    </p>
+    <script>
+      const el1 = document.getElementById("title"); //getElementById deyince # yazmaya gerek kalmaz!!!
+      console.log(el1); //<h1 id="title">Javascript</h1>
+
+      const el2 = document.getElementsByTagName("h4"); //getElementByTagName
+      console.log(el2); //HTMLCollection(2) [h4, h4]
+
+      const el3 = document.getElementsByClassName("desc"); //getElementsByClassName deyince . yazmaya gerek kalmaz!!!
+      console.log(el3); //HTMLCollection(2) [p.desc, p.desc]
+    </script>
+  </body>
+</html>

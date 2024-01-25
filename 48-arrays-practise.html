@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btnSetPrices">Set Prices</button>
+
+    <script>
+      const prices = [10, 65, 4, 36, 333, 9, 17];
+      document.querySelector("#btnSetPrices").addEventListener("click", () => {
+        for (let i = 0; i < prices.length; i++) {
+          prices[i] = (prices[i] * 1.2).toFixed(2);
+        }
+        console.log(prices);
+      });
+    </script>
+  </body>
+</html>

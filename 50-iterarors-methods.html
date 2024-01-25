@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const meyveler = ["Elma", "Armut", "Muz", "Kivi"];
+      console.log(meyveler); //['Elma', 'Armut', 'Muz', 'Kivi']
+
+      meyveler.pop(); //sondaki elemani siler
+      console.log(meyveler); //['Elma', 'Armut', 'Muz']
+
+      meyveler.push("Avokado"); //sona eleman ekler
+      console.log(meyveler); //['Elma', 'Armut', 'Muz', 'Avokado']
+
+      meyveler.shift(); //Bastaki elemani siler
+      console.log(meyveler); //['Armut', 'Muz', 'Avokado']
+
+      meyveler.unshift("Erik"); //basa elemanekler
+      console.log(meyveler); //['Erik', 'Armut', 'Muz', 'Avokado']
+
+      meyveler.reverse(); //elemanlari terse cevirir
+      console.log(meyveler); //['Avokado', 'Muz', 'Armut', 'Elma']
+
+      meyveler.sort(); //Harf gore siralar
+      console.log(meyveler); //['Armut', 'Avokado', 'Erik', 'Muz']
+
+      meyveler.splice(1, 0, "Kiraz"); // 1. elemandan itibaren 0 eleman sil dedik. yani silmeyip araya yerlestirdik
+      console.log(meyveler); //['Armut', 'Kiraz', 'Avokado', 'Erik', 'Muz']
+
+      meyveler.splice(2, 2);
+      console.log(meyveler); //['Armut', 'Kiraz', 'Muz']
+
+      meyveler.splice(1, 1, "Ceviz", "Findik"); //1. elemandan itibaren 1 eleman sil ceviz ve findik ekle dedik.
+      console.log(meyveler); //['Armut', 'Ceviz', 'Findik', 'Muz']
+
+      meyveler.splice(0, meyveler.length);
+      console.log(meyveler); //[]
+    </script>
+  </body>
+</html>

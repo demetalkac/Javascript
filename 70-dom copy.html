@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="title">Bugun hava <span style="display: none">cok</span> sicak</h2>
+
+    <script>
+      const title = document.querySelector("#title");
+      console.log(title.innerText); //Bugun hava sicak
+      console.log(title.innerHTML); //Bugun hava <span style="display: none;">cok</span> sicak
+      console.log(title.textContent); //Bugun hava cok sicak
+      //display:none ile innerText ile content farki cok kelimesini yazmamasi.
+    </script>
+  </body>
+</html>

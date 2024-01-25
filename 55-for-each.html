@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="ddlAnimals"></select>
+    <script>
+      const animals = [
+        "elephant",
+        "camel",
+        "bird",
+        "camel",
+        "mouse",
+        "camel",
+        "cat",
+      ];
+      let options = "";
+
+      //for each dongusu;
+      animals.forEach((animal, index) => {
+        options += `<option value="${index}">${animal}</option>`;
+      });
+      document.querySelector("#ddlAnimals").innerHTML = options;
+    </script>
+  </body>
+</html>

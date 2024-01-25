@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const animals = [
+        "elephant",
+        "camel",
+        "bird",
+        "camel",
+        "mouse",
+        "camel",
+        "cat",
+      ];
+      //for of dongusu
+      for (let x of animals) {
+        // x yerine animal da yazilabilir.
+        console.log(x);
+      }
+      for (let [index, animal] of animals.entries()) {
+        console.log(index, animal); //0 elephant 1 camel diye devam eder
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const pricesTL = [1233, 3432, 6433, 7785, 8864];
+      const euro = 30.57;
+      const gdp = 39.17;
+
+      const pricesEUR = pricesTL.map((price) => (price / euro).toFixed(2));
+      const pricesGDP = pricesTL.map((price) => (price / gdp).toFixed(2));
+      console.log(pricesEUR);
+      console.log(pricesGDP);
+      //console.log(pricesEUR, pricesGDP);
+    </script>
+  </body>
+</html>

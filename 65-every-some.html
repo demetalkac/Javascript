@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const nums = [123, 45, 23, 12, 66, 23];
+
+      console.log(nums.every((num) => num > 0)); //tum rakamlar 0 dan buyuk true dondu. icinde 0 olsa false olur.
+      if (nums.every((num) => num > 0)) {
+        alert("Butun sayilar sifirdan buyuk");
+      }
+
+      if (nums.some((num) => num < 0)) {
+        alert("En az bir tane negatif sayi var.");
+      }
+    </script>
+  </body>
+</html>

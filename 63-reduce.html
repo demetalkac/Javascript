@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const nums = [123, 45, 23, 12, 66, 23];
+
+      //KLASIK YONTEM
+      let total = 0;
+      for (let i = 0; i < nums.length; i++) {
+        total += nums[i];
+      }
+      console.log(total); //292
+
+      const t = nums.reduce((total, x) => total + x, 0);
+      console.log(t); //292
+
+      ///REDUCE PRACTICE
+      const salaries = [2000, 2500, 5500, 10000, 1000, 1500];
+      const totalSalary = salaries
+        .filter((salary) => salary < 3000) //3000'den kucuk degerleri filtreledik yeni bir dizi olusturduk
+        .map((salary) => salary * 1.1) ////yeni dizi elemanlarini 1.1 ile carpip %10 zam yaptik
+        .reduce((total, salary) => total + salary); //zam yapilmis elemanlari topladik.
+      console.log(totalSalary);
+    </script>
+  </body>
+</html>
