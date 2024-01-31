@@ -9,13 +9,15 @@
     <button id="btnSetPrices">Set Prices</button>
 
     <script>
-      const prices = [10, 65, 4, 36, 333, 9, 17];
+      const prices = [123, 5687, 345, 17];
       document.querySelector("#btnSetPrices").addEventListener("click", () => {
         for (let i = 0; i < prices.length; i++) {
-          prices[i] = (prices[i] * 1.2).toFixed(2);
+          prices[i] = (prices[i] * 1.2).toFixed(2); // toFixed() ondalık sayıyı ayarlamada kullanıyoruz.
         }
         console.log(prices);
       });
+
+      //  const prices = [123, 5687, 345, 17]; seklindeki dizi elemanlarının degerini %20 artıran fonksionu yazınız.
     </script>
   </body>
 </html>

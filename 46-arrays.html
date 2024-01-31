@@ -8,18 +8,20 @@
   <body>
     <script>
       const cities = ["Ankara", "istanbul", "Izmir"];
-      const countries=["USA","France","Germany","Netherlands"];
+      const countries = ["USA", "France", "Germany", "Netherland"];
 
       console.log(cities);
-      console.log(typeof (cities));
-      console.log(cities[2]);//dizi elemanina ulasmak icin index no kullanilir. sifirdan baslar.
-      console.log(cities.length);//dizinin eleman sayisini verir.
+      console.log(typeof cities);
+      console.log(cities[2]); //dizi elemanina ulasmak icin index no kullanilir. sifirdan baslar.
+      console.log(cities.length); //dizinin eleman sayisini verir. => length
 
-      console.log(countries[countries.length-1]);
-      console.log(countries[4]);//undefined
+      console.log(countries[countries.length - 1]); // son elemanı "length-1" ile buluruz.
+      console.log(countries[4]); //undefined => olmayan bir elemana ulasmaya calısırsak alırız.
 
-      countries[2]='Turkey';
-      console.log(countries[2]);//turkey yaptik
+      countries[2] = "Turkey";
+      console.log(countries[2]); //turkey yaptik
+
+      //countries = "hello";  "cons" tipinde olusturdugumuz arrayın elemanlarını degistirmeme izin verir. Fakat direk array'i degistirmeme izin vermez, hata alırız.
     </script>
   </body>
 </html>
